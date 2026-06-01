@@ -1,13 +1,14 @@
 <div align="center">
 
-<img src="https://via.placeholder.com/150" width="150" alt="Akhila Reddy Katipelli"/>
+<img src="https://raw.githubusercontent.com/akhilak2701/akhilak2701/main/akhila_profile.jpeg" width="150" style="border-radius:50%;" alt="Akhila Reddy Katipelli"/>
 
 <h1>Akhila Reddy Katipelli</h1>
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=0EA5E9&center=true&vCenter=true&width=700&lines=Clinical+%26+Healthcare+Data+Analyst;SQL+%7C+Python+%7C+Tableau+%7C+Power+BI;Transforming+Clinical+Data+into+Actionable+Insights;ETL+Pipelines+%7C+BI+Dashboards+%7C+Population+Health)](https://git.io/typing-svg)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akhilakreddy/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:akhilak2701@gmail.com)
+[![Phone](https://img.shields.io/badge/📞%20%2B1%20314--441--8964-25D366?style=for-the-badge&logoColor=white)](tel:+13144418964)
 [![Location](https://img.shields.io/badge/📍%20St.%20Louis%2C%20MO-0f172a?style=for-the-badge)](/)
 
 </div>
@@ -121,8 +122,9 @@ Clinical & Healthcare Data Analyst with **4+ years** of progressive experience d
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akhilakreddy/)
+[![Email](https://img.shields.io/badge/Email-akhilak2701%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:akhilak2701@gmail.com)
+[![Phone](https://img.shields.io/badge/Phone-%2B1%20314--441--8964-25D366?style=for-the-badge&logoColor=white)](tel:+13144418964)
 [![Location](https://img.shields.io/badge/St._Louis%2C_MO-USA-0f172a?style=for-the-badge&logo=googlemaps&logoColor=white)](/)
 
 </div>
