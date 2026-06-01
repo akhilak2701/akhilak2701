@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education — Akhila Reddy Katipelli</title>
+  <meta name="description" content="Education of Akhila Reddy Katipelli — M.S. Health Data Science, Saint Louis University & B.Pharm, Gurunanak Institute." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>!function(){var t=localStorage.getItem('theme');t&&document.documentElement.setAttribute('data-theme',t)}()</script>
+  <style>
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    .edu-main-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out);
+    }
+    .edu-main-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+    .edu-card-top {
+      padding: 2.25rem 2rem;
+      position: relative;
+    }
+    .edu-card-top-master { background: var(--deep-blue); }
+    .edu-card-top-bachelor { background: var(--light-grey); }
+    .edu-uni-initial {
+      width: 64px; height: 64px;
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; font-weight: 900;
+      margin-bottom: 1.25rem;
+      transition: transform .35s var(--ease-bounce);
+    }
+    .edu-main-card:hover .edu-uni-initial { transform: rotate(-6deg) scale(1.08); }
+    .edu-uni-master   { background: rgba(255,255,255,.15); color: var(--white); }
+    .edu-uni-bachelor { background: var(--white); color: var(--deep-blue); box-shadow: var(--shadow-sm); }
+    .edu-degree-title {
+      font-size: 1.2rem; font-weight: 800; line-height: 1.25;
+    }
+    .edu-degree-master  { color: var(--white); }
+    .edu-degree-bachelor{ color: var(--deep-blue); }
+    .edu-field {
+      font-size: .9rem; font-weight: 500; margin-top: .3rem;
+    }
+    .edu-field-master  { color: rgba(255,255,255,.7); }
+    .edu-field-bachelor{ color: var(--slate); }
+    .edu-dates-badge {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      padding: .3rem .85rem;
+      border-radius: 100px;
+      font-size: .72rem; font-weight: 700;
+    }
+    .badge-master  { background: rgba(255,255,255,.18); color: var(--white); }
+    .badge-bach    { background: var(--blue-mid); color: var(--royal-blue); }
+
+    .edu-card-bottom { padding: 2rem; }
+    .edu-detail-row {
+      display: flex; align-items: center; gap: .75rem;
+      padding: .65rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .875rem;
+      transition: padding-left .2s var(--ease-out);
+    }
+    .edu-detail-row:last-child { border-bottom: none; }
+    .edu-detail-row:hover { padding-left: .4rem; }
+    .edu-detail-icon { color: var(--royal-blue); flex-shrink: 0; }
+    .edu-detail-label { color: var(--slate); min-width: 90px; font-size: .78rem; font-weight: 500; }
+    .edu-detail-value { color: var(--dark-grey); font-weight: 600; }
+
+    .gpa-block {
+      display: inline-flex;
+      align-items: baseline;
+      gap: .35rem;
+      margin-top: .35rem;
+    }
+    .gpa-num { font-size: 2rem; font-weight: 900; color: var(--deep-blue); line-height: 1; }
+    .gpa-denom { font-size: 1rem; color: var(--slate); }
+
+    /* Course tags */
+    .course-grid {
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      margin-top: .75rem;
+    }
+
+    /* Timeline for academic journey */
+    .acad-timeline { position: relative; padding-left: 2rem; }
+    .acad-timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px; top: 4px; bottom: 4px;
+      width: 1px;
+      background: var(--border);
+    }
+    .acad-item { position: relative; padding-bottom: 2rem; }
+    .acad-item:last-child { padding-bottom: 0; }
+    .acad-dot {
+      position: absolute;
+      left: -1.625rem;
+      top: 3px;
+      width: 13px; height: 13px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--royal-blue);
+      transition: background .25s var(--ease), transform .3s var(--ease-bounce);
+      z-index: 1;
+    }
+    .acad-item:hover .acad-dot { background: var(--royal-blue); transform: scale(1.3); }
+    .acad-year  { font-size: .72rem; font-weight: 700; color: var(--royal-blue); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .25rem; }
+    .acad-title { font-size: .9rem; font-weight: 700; color: var(--deep-blue); }
+    .acad-sub   { font-size: .8rem; color: var(--slate); margin-top: .2rem; line-height: 1.5; }
+
+    @media(max-width: 1023px) {
+      .edu-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-monogram">AR</div>
+        <span>Akhila Reddy</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html"      class="nav-link">Home</a>
+        <a href="about.html"      class="nav-link">About</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="techstack.html"  class="nav-link">Tech Stack</a>
+        <a href="education.html"  class="nav-link">Education</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:.35rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun"  width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html"      class="nav-link">Home</a>
+  <a href="about.html"      class="nav-link">About</a>
+  <a href="experience.html" class="nav-link">Experience</a>
+  <a href="techstack.html"  class="nav-link">Tech Stack</a>
+  <a href="education.html"  class="nav-link">Education</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="edu-hero">
+  <div class="container">
+    <div class="section-tag" style="color:rgba(255,255,255,.6);opacity:0;animation:slideUp .5s .1s var(--ease-out) forwards;">
+      <span style="display:inline-block;width:16px;height:2px;background:rgba(255,255,255,.6);border-radius:2px;margin-right:.45rem;"></span>
+      Education
+    </div>
+    <h1 class="section-h" style="color:#ffffff;font-size:clamp(2rem,4.5vw,3.25rem);opacity:0;animation:slideUp .5s .2s var(--ease-out) forwards;">
+      Academic Foundation<br>for Healthcare Analytics
+    </h1>
+    <p style="color:rgba(255,255,255,.65);max-width:560px;font-size:1rem;line-height:1.75;margin-top:.75rem;opacity:0;animation:slideUp .5s .35s var(--ease-out) forwards;">
+      A dual-domain background in Health Data Science and Pharmacy — combining quantitative analytical rigor with deep clinical and pharmaceutical domain knowledge.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;max-width:580px;margin-top:2.5rem;opacity:0;animation:fadeIn .5s .55s forwards;">
+      <div style="padding:1.25rem;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.08);">
+        <div style="font-size:1.75rem;font-weight:900;color:#ffffff;line-height:1;">3.54</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.60);margin-top:.3rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600;">Master's GPA</div>
+      </div>
+      <div style="padding:1.25rem;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.08);">
+        <div style="font-size:1.75rem;font-weight:900;color:#ffffff;line-height:1;">8.34</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.60);margin-top:.3rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600;">Bachelor's CGPA</div>
+      </div>
+      <div style="padding:1.25rem;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.08);">
+        <div style="font-size:1.75rem;font-weight:900;color:#ffffff;line-height:1;">2</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.60);margin-top:.3rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600;">Degrees Earned</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DEGREE CARDS ═══ -->
+<section class="section">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="section-tag">Academic Qualifications</div>
+      <h2 class="section-h">Degrees &amp; Institutions</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="edu-grid">
+
+      <!-- Master's -->
+      <div class="edu-main-card reveal d1">
+        <div class="edu-card-top edu-card-top-master">
+          <span class="edu-dates-badge badge-master">Jan 2023 – May 2025</span>
+          <div class="edu-uni-initial edu-uni-master">SLU</div>
+          <div class="edu-degree-title edu-degree-master">Master of Science</div>
+          <div class="edu-field edu-field-master">Health Data Science</div>
+        </div>
+        <div class="edu-card-bottom">
+          <div class="edu-detail-row">
+            <svg class="edu-detail-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span class="edu-detail-label">Institution</span>
+            <span class="edu-detail-value">Saint Louis University</span>
+          </div>
+          <div class="edu-detail-row">
+            <svg class="edu-detail-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="edu-detail-label">Location</span>
+            <span class="edu-detail-value">St. Louis, Missouri</span>
+          </div>
+          <div class="edu-detail-row">
+            <svg class="edu-detail-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span class="edu-detail-label">GPA</span>
+            <span class="edu-detail-value" style="color:var(--royal-blue);">3.54 / 4.0</span>
+          </div>
+          <div class="edu-detail-row">
+            <svg class="edu-detail-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span class="edu-detail-label">Duration</span>
+            <span class="edu-detail-value">Jan 2023 – May 2025</span>
+          </div>
+
+          <div style="margin-top:1.5rem;">
+            <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--slate);margin-bottom:.65rem;">Key Focus Areas</div>
+            <div class="course-grid">
+              <span class="tag">Health Informatics</span>
+              <span class="tag">Biostatistics</span>
+              <span class="tag">Clinical Data Management</span>
+              <span class="tag">Healthcare Analytics</span>
+              <span class="tag">Machine Learning in Health</span>
+              <span class="tag">Epidemiology</span>
+              <span class="tag">Health Databases</span>
+              <span class="tag">Data Visualization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bachelor's -->
+      <div class="edu-main-card reveal d2">
+        <div class="edu-card-top edu-card-top-bachelor">
+          <span class="edu-dates-badge badge-bach">Aug 2018 – Jul 2022</span>
+          <div class="edu-uni-initial edu-uni-bachelor">GIT</div>
+          <div class="edu-degree-title edu-degree-bachelor">Bachelor of Pharmacy</div>
+          <div class="edu-field edu-field-bachelor">Pharmaceutical Sciences</div>
+        </div>
+        <div class="edu-card-bottom">
+          <div class="edu-detail-row">
+            <svg class="edu-detail-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span class="edu-detail-label">Institution</span>
+            <span class="edu-detail-value">Gurunanak Institute of Technical Campus</span>
+          </div>
+          <div class="edu-detail-row">
+            <svg class="edu-detail-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="edu-detail-label">Location</span>
+            <span class="edu-detail-value">Hyderabad, India</span>
+          </div>
+          <div class="edu-detail-row">
+            <svg class="edu-detail-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span class="edu-detail-label">CGPA</span>
+            <span class="edu-detail-value" style="color:var(--royal-blue);">8.34 / 10.0</span>
+          </div>
+          <div class="edu-detail-row">
+            <svg class="edu-detail-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span class="edu-detail-label">Duration</span>
+            <span class="edu-detail-value">Aug 2018 – Jul 2022</span>
+          </div>
+
+          <div style="margin-top:1.5rem;">
+            <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--slate);margin-bottom:.65rem;">Key Focus Areas</div>
+            <div class="course-grid">
+              <span class="tag">Pharmacology</span>
+              <span class="tag">Pharmacovigilance</span>
+              <span class="tag">Clinical Pharmacy</span>
+              <span class="tag">Medicinal Chemistry</span>
+              <span class="tag">Pharmaceutical Analysis</span>
+              <span class="tag">Drug Regulatory Affairs</span>
+              <span class="tag">Biopharmaceutics</span>
+              <span class="tag">Hospital Pharmacy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── How Education Powers Work ── -->
+    <div class="section-header reveal">
+      <div class="section-tag">Academic Impact</div>
+      <h2 class="section-h">Education → Professional Application</h2>
+      <p class="section-sub">How each degree directly fuels real-world healthcare analytics work.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-bottom:4rem;">
+      <div class="card reveal d1" style="padding:1.75rem;border-left:3px solid var(--royal-blue);">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--royal-blue);margin-bottom:.75rem;">From M.S. Health Data Science</div>
+        <h3 style="font-size:.95rem;font-weight:700;color:var(--deep-blue);margin-bottom:.5rem;">Statistical & Predictive Modeling</h3>
+        <p style="font-size:.83rem;color:var(--slate);line-height:1.6;">Graduate-level biostatistics and ML coursework directly applied to population health analytics, trend analysis, and predictive models at Kaiser and UHG.</p>
+      </div>
+      <div class="card reveal d2" style="padding:1.75rem;border-left:3px solid var(--teal);">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);margin-bottom:.75rem;">From M.S. Health Data Science</div>
+        <h3 style="font-size:.95rem;font-weight:700;color:var(--deep-blue);margin-bottom:.5rem;">Health Informatics & EHR Systems</h3>
+        <p style="font-size:.83rem;color:var(--slate);line-height:1.6;">Deep understanding of healthcare data structures, EHR/EMR architecture, and HL7/FHIR standards — enabling precise data extraction and integration from clinical systems.</p>
+      </div>
+      <div class="card reveal d3" style="padding:1.75rem;border-left:3px solid var(--green);">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin-bottom:.75rem;">From B.Pharmacy</div>
+        <h3 style="font-size:.95rem;font-weight:700;color:var(--deep-blue);margin-bottom:.5rem;">Clinical Domain Expertise</h3>
+        <p style="font-size:.83rem;color:var(--slate);line-height:1.6;">Pharmacology and clinical pharmacy background provides contextual understanding of patient outcomes, drug interactions, and adverse events — critical for meaningful clinical data interpretation.</p>
+      </div>
+      <div class="card reveal d4" style="padding:1.75rem;border-left:3px solid var(--amber);">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);margin-bottom:.75rem;">From B.Pharmacy</div>
+        <h3 style="font-size:.95rem;font-weight:700;color:var(--deep-blue);margin-bottom:.5rem;">Regulatory & Compliance Mindset</h3>
+        <p style="font-size:.83rem;color:var(--slate);line-height:1.6;">Pharmaceutical regulatory training — GLP, GCP, SOP documentation — forms the compliance foundation that underpins rigorous HIPAA-compliant data handling practices in all roles.</p>
+      </div>
+    </div>
+
+    <!-- ── Academic Timeline ── -->
+    <div class="section-header reveal">
+      <div class="section-tag">Timeline</div>
+      <h2 class="section-h">Academic Journey</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="acad-timeline">
+      <div class="acad-item reveal d1">
+        <div class="acad-dot"></div>
+        <div class="acad-year">Aug 2018</div>
+        <div class="acad-title">Enrolled — Bachelor of Pharmacy</div>
+        <div class="acad-sub">Gurunanak Institute of Technical Campus, Hyderabad, India. Four-year intensive program in pharmaceutical sciences, clinical research, and drug regulatory affairs.</div>
+      </div>
+      <div class="acad-item reveal d2">
+        <div class="acad-dot"></div>
+        <div class="acad-year">Sep 2021 – May 2022</div>
+        <div class="acad-title">Pharmacy &amp; Research Internship — Fortis Healthcare</div>
+        <div class="acad-sub">Applied pharmaceutical knowledge in a real clinical environment — pharmacovigilance, ADR monitoring, and clinical research data management during final undergraduate year.</div>
+      </div>
+      <div class="acad-item reveal d3">
+        <div class="acad-dot"></div>
+        <div class="acad-year">Jul 2022</div>
+        <div class="acad-title">Graduated — B.Pharm (CGPA 8.34 / 10)</div>
+        <div class="acad-sub">Completed Bachelor of Pharmacy with distinction. Strong foundation in clinical sciences, pharmacology, and data management ready for graduate studies.</div>
+      </div>
+      <div class="acad-item reveal d4">
+        <div class="acad-dot"></div>
+        <div class="acad-year">Jan 2023</div>
+        <div class="acad-title">Enrolled — M.S. Health Data Science</div>
+        <div class="acad-sub">Saint Louis University, St. Louis, MO. Graduate program combining health informatics, biostatistics, machine learning, and clinical data management.</div>
+      </div>
+      <div class="acad-item reveal d5">
+        <div class="acad-dot"></div>
+        <div class="acad-year">Jul 2023</div>
+        <div class="acad-title">Healthcare Data Analyst — Kaiser Permanente</div>
+        <div class="acad-sub">Simultaneously working full-time while completing graduate studies — applying academic analytics skills directly in enterprise healthcare analytics.</div>
+      </div>
+      <div class="acad-item reveal d6">
+        <div class="acad-dot"></div>
+        <div class="acad-year">May 2025</div>
+        <div class="acad-title">Graduated — M.S. Health Data Science (GPA 3.54 / 4.0)</div>
+        <div class="acad-sub">Completed graduate degree with strong academic performance while maintaining professional career. Now applying full dual-domain expertise at UnitedHealth Group.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="section-sm" style="background:var(--light-grey);border-top:1px solid var(--border);">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;">
+    <div class="reveal">
+      <div style="font-size:1.2rem;font-weight:800;color:var(--deep-blue);">Ready to put this expertise to work?</div>
+      <div style="font-size:.9rem;color:var(--slate);margin-top:.3rem;">Explore the full experience or download the CV.</div>
+    </div>
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;" class="reveal d1">
+      <a href="experience.html" class="btn btn-primary">View Experience</a>
+      <a href="assets/Akhila_DA_Resume.docx" download class="btn btn-outline">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Download CV</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-name">Akhila Reddy Katipelli</div>
+        <div class="footer-role">Healthcare Data Analyst · St. Louis, MO</div>
+      </div>
+      <a href="assets/Akhila_DA_Resume.docx" download class="footer-download">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+    </div>
+    <div class="footer-contacts">
+      <a href="tel:+13144418964" class="footer-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.06 6.06l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.01z"/></svg>Call</a>
+      <a href="mailto:akhilak2701@gmail.com" class="footer-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</a>
+      <a href="https://www.linkedin.com/in/akhilakreddy/" target="_blank" class="footer-btn"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+      <a href="https://github.com" target="_blank" class="footer-btn"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
+      <a href="https://wa.me/13144418964?text=Hi%2C+I+came+across+your+profile+and+found+your+background+interesting.+We+have+an+opportunity+that+aligns+with+your+experience.+Would+you+be+open+to+discussing+this+further%3F" target="_blank" class="footer-btn"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.127 1.528 5.869L0 24l6.337-1.503A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 0 1-5.051-1.394l-.36-.216-3.764.893.934-3.657-.237-.375A9.812 9.812 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>WhatsApp</a>
+    </div>
+    <div class="footer-copy">All rights reserved &copy; <span id="yr"></span> Triopath Careers LLC</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

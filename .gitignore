@@ -1,0 +1,10 @@
+# Dev tool settings
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp

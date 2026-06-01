@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Akhila Reddy Katipelli</title>
+  <meta name="description" content="Professional experience of Akhila Reddy Katipelli — UHG, Kaiser Permanente, Cipla, Fortis Healthcare." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>!function(){var t=localStorage.getItem('theme');t&&document.documentElement.setAttribute('data-theme',t)}()</script>
+  <style>
+    /* ── Unique layout extras for Experience page ── */
+    .exp-strip {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 2.5rem;
+    }
+    .exp-strip-item {
+      padding: 1.25rem 1.5rem;
+      border-right: 1px solid rgba(255,255,255,.1);
+    }
+    .exp-strip-item:last-child { border-right: none; }
+    .exp-strip-num  { font-size: 2rem; font-weight: 900; color: var(--white); line-height:1; }
+    .exp-strip-lbl  { font-size: .72rem; color: rgba(255,255,255,.55); margin-top:.3rem; font-weight:500; text-transform:uppercase; letter-spacing:.08em; }
+
+    /* Highlight card */
+    .highlight-card {
+      background: var(--deep-blue);
+      color: var(--white);
+      border-radius: 14px;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out);
+    }
+    .highlight-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--royal-blue);
+    }
+    .highlight-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+    .highlight-num  { font-size: 2.25rem; font-weight: 900; color: var(--white); line-height:1; }
+    .highlight-lbl  { font-size: .78rem; color: rgba(255,255,255,.6); margin-top:.35rem; font-weight:500; }
+
+    /* Achievement pill */
+    .ach {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .3rem .85rem;
+      background: var(--green-light);
+      border: 1px solid #BBF7D0;
+      border-radius: 100px;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--green);
+    }
+
+    @media(max-width:767px){
+      .exp-strip { grid-template-columns: repeat(2,1fr); }
+      .exp-strip-item:nth-child(2) { border-right:none; }
+    }
+    @media(max-width:480px){
+      .exp-strip { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-monogram">AR</div>
+        <span>Akhila Reddy</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html"      class="nav-link">Home</a>
+        <a href="about.html"      class="nav-link">About</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="techstack.html"  class="nav-link">Tech Stack</a>
+        <a href="education.html"  class="nav-link">Education</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:.35rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun"  width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html"      class="nav-link">Home</a>
+  <a href="about.html"      class="nav-link">About</a>
+  <a href="experience.html" class="nav-link">Experience</a>
+  <a href="techstack.html"  class="nav-link">Tech Stack</a>
+  <a href="education.html"  class="nav-link">Education</a>
+</div>
+
+<!-- ═══ EXP HERO ═══ -->
+<section class="exp-hero">
+  <div class="container">
+    <div class="section-tag" style="opacity:0;animation:slideUp .5s .1s var(--ease-out) forwards;">Professional Experience</div>
+    <h1 class="section-h" style="color:#ffffff;font-size:clamp(2rem,4.5vw,3.25rem);opacity:0;animation:slideUp .5s .2s var(--ease-out) forwards;">
+      4+ Years Delivering<br>Healthcare Analytics Impact
+    </h1>
+    <p style="color:rgba(255,255,255,.65);max-width:540px;font-size:1rem;line-height:1.75;margin-top:.75rem;opacity:0;animation:slideUp .5s .35s var(--ease-out) forwards;">
+      From pharmaceutical research at Fortis to enterprise-scale clinical analytics at UHG — a progressive career built on SQL mastery, BI storytelling, and data-driven healthcare improvement.
+    </p>
+
+    <div class="exp-strip" style="opacity:0;animation:fadeIn .6s .5s forwards;">
+      <div class="exp-strip-item">
+        <div class="exp-strip-num"><span data-count="4" data-suffix="+">4+</span></div>
+        <div class="exp-strip-lbl">Years Experience</div>
+      </div>
+      <div class="exp-strip-item">
+        <div class="exp-strip-num"><span data-count="4">4</span></div>
+        <div class="exp-strip-lbl">Organizations</div>
+      </div>
+      <div class="exp-strip-item">
+        <div class="exp-strip-num"><span data-count="3">3</span></div>
+        <div class="exp-strip-lbl">Roles in Analytics</div>
+      </div>
+      <div class="exp-strip-item">
+        <div class="exp-strip-num"><span data-count="10" data-suffix="+">10+</span></div>
+        <div class="exp-strip-lbl">Core Technologies</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ENTRIES ═══ -->
+<section class="section">
+  <div class="container">
+
+    <!-- ── UHG ── -->
+    <div class="exp-card reveal">
+      <div class="exp-card-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;">
+            <div class="exp-company">UnitedHealth Group (UHG)</div>
+            <span class="badge badge-green">Current Role</span>
+          </div>
+          <div class="exp-role">Clinical &amp; Healthcare Data Analyst</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <div class="exp-dates">Jun 2025 – Present</div>
+          <div style="font-size:.75rem;color:var(--light-slate);margin-top:.2rem;">Full-time</div>
+        </div>
+      </div>
+
+      <div class="exp-card-body">
+        <!-- KPI highlights -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:1.75rem;">
+          <div class="highlight-card reveal-scale d1">
+            <div class="highlight-num">SQL</div>
+            <div class="highlight-lbl">Complex queries, views &amp; stored procedures</div>
+          </div>
+          <div class="highlight-card reveal-scale d2">
+            <div class="highlight-num">ETL</div>
+            <div class="highlight-lbl">Automated data transformation pipelines</div>
+          </div>
+          <div class="highlight-card reveal-scale d3">
+            <div class="highlight-num">BI</div>
+            <div class="highlight-lbl">Tableau &amp; Power BI executive dashboards</div>
+          </div>
+        </div>
+
+        <div class="exp-bullets">
+          <div class="exp-bullet">Analyze clinical, patient, provider, claims, and operational datasets to identify trends, treatment outcomes, and healthcare performance metrics.</div>
+          <div class="exp-bullet">Design, optimize, and maintain complex SQL queries, views, stored procedures, and reporting solutions for clinical data analysis.</div>
+          <div class="exp-bullet">Develop automated ETL workflows and data transformation pipelines using SQL and Python to improve reporting efficiency and scalability.</div>
+          <div class="exp-bullet">Create interactive dashboards, KPI scorecards, and analytical reports using Tableau and Power BI for clinical and executive stakeholders.</div>
+          <div class="exp-bullet">Perform data profiling, validation checks, root cause analysis, and data quality assurance while ensuring HIPAA and HL7 compliance.</div>
+          <div class="exp-bullet">Work with EHR/EMR systems and healthcare databases to integrate, standardize, and manage clinical and operational datasets.</div>
+          <div class="exp-bullet">Collaborate with clinicians, business analysts, data engineers, and cross-functional teams in Agile/Scrum environments.</div>
+          <div class="exp-bullet">Generate ad-hoc reports, compliance reports, and analytical insights to support audits, regulatory reporting, and strategic decision-making.</div>
+          <div class="exp-bullet">Improve reporting performance and data governance through optimized data models, cloud-based analytics platforms, and secure data handling.</div>
+        </div>
+      </div>
+
+      <div class="exp-stack">
+        <span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Tableau</span><span class="tag">Power BI</span>
+        <span class="tag">ETL/ELT</span><span class="tag">EHR/EMR</span><span class="tag">HL7</span><span class="tag">HIPAA</span>
+        <span class="tag">Data Modeling</span><span class="tag">Statistical Analysis</span><span class="tag">Predictive Analytics</span>
+        <span class="tag">Cloud Platforms</span><span class="tag">Agile/Scrum</span><span class="tag">KPI Reporting</span>
+      </div>
+    </div>
+
+    <!-- ── Kaiser ── -->
+    <div class="exp-card reveal">
+      <div class="exp-card-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;">
+            <div class="exp-company">Kaiser Permanente</div>
+            <span class="badge badge-blue">2 Years</span>
+          </div>
+          <div class="exp-role">Healthcare Data Analyst</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <div class="exp-dates">Jul 2023 – May 2025</div>
+          <div style="font-size:.75rem;color:var(--light-slate);margin-top:.2rem;">Full-time</div>
+        </div>
+      </div>
+
+      <div class="exp-card-body">
+        <!-- Unique layout: two-column achievement blocks -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.75rem;">
+          <div class="card" style="padding:1.25rem;background:var(--blue-light);border-color:var(--blue-mid);">
+            <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--royal-blue);margin-bottom:.5rem;">Data Engineering</div>
+            <p style="font-size:.82rem;color:var(--dark-grey);line-height:1.55;">Complex SQL pipelines, stored procedures, and automated ETL/ELT workflows supporting scalable analytics at enterprise scale.</p>
+          </div>
+          <div class="card" style="padding:1.25rem;background:var(--teal-light);border-color:rgba(15,118,110,.15);">
+            <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);margin-bottom:.5rem;">Population Health</div>
+            <p style="font-size:.82rem;color:var(--dark-grey);line-height:1.55;">Statistical analysis and predictive modeling supporting population health management, quality improvement, and clinical research.</p>
+          </div>
+        </div>
+
+        <div class="exp-bullets">
+          <div class="exp-bullet">Extracted, transformed, and loaded healthcare data from EHR systems, clinical databases, and enterprise platforms using SQL and Python-based ETL workflows.</div>
+          <div class="exp-bullet">Developed complex SQL queries, stored procedures, and automated data pipelines to support scalable healthcare reporting and analytics solutions.</div>
+          <div class="exp-bullet">Created interactive dashboards, KPI scorecards, and analytical reports in Tableau and Power BI to support clinical, operational, and executive decision-making.</div>
+          <div class="exp-bullet">Performed data validation, cleansing, normalization, reconciliation, and profiling to ensure healthcare data quality, integrity, and HIPAA compliance.</div>
+          <div class="exp-bullet">Analyzed patient, claims, provider, and operational datasets to identify trends, performance gaps, and opportunities for process improvement.</div>
+          <div class="exp-bullet">Applied statistical analysis, predictive analytics, and data modeling to support healthcare research, quality improvement, and population health initiatives.</div>
+          <div class="exp-bullet">Automated recurring reporting workflows using Python scripting and scheduling tools, reducing manual effort and improving reporting turnaround time.</div>
+          <div class="exp-bullet">Optimized SQL queries, ETL jobs, and dashboard performance to improve reporting scalability, efficiency, and overall system performance.</div>
+          <div class="exp-bullet">Documented ETL workflows, data mappings, business rules, and reporting processes while supporting regulatory reporting and data governance.</div>
+        </div>
+      </div>
+
+      <div class="exp-stack">
+        <span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Tableau</span><span class="tag">Power BI</span>
+        <span class="tag">SQL Server</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span>
+        <span class="tag">EHR/EMR</span><span class="tag">HIPAA</span><span class="tag">HL7</span>
+        <span class="tag">Data Validation</span><span class="tag">Predictive Analytics</span><span class="tag">Agile/Scrum</span>
+      </div>
+    </div>
+
+    <!-- ── Cipla ── -->
+    <div class="exp-card reveal">
+      <div class="exp-card-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;">
+            <div class="exp-company">Cipla Ltd.</div>
+            <span class="badge badge-amber">7 Months</span>
+          </div>
+          <div class="exp-role">Healthcare Reporting Analyst</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <div class="exp-dates">Jun 2022 – Dec 2022</div>
+          <div style="font-size:.75rem;color:var(--light-slate);margin-top:.2rem;">Full-time</div>
+        </div>
+      </div>
+
+      <div class="exp-card-body">
+        <!-- Horizontal accent bar layout -->
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+          <span class="ach">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Reporting Automation
+          </span>
+          <span class="ach">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            KPI Dashboard Design
+          </span>
+          <span class="ach">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Root Cause Analysis
+          </span>
+          <span class="ach">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            HIPAA Compliance
+          </span>
+        </div>
+
+        <div class="exp-bullets">
+          <div class="exp-bullet">Developed and maintained operational, clinical, and financial reports to monitor healthcare KPIs, utilization trends, and performance metrics.</div>
+          <div class="exp-bullet">Designed and automated reporting solutions using SQL, Excel, Tableau, and Power BI, significantly improving efficiency and reducing manual effort.</div>
+          <div class="exp-bullet">Extracted, transformed, validated, and reconciled data from multiple healthcare systems to support accurate analytics and reporting.</div>
+          <div class="exp-bullet">Performed data quality checks, root cause analysis, and process improvement initiatives to enhance reporting accuracy and operational performance.</div>
+          <div class="exp-bullet">Collaborated with clinical, administrative, and cross-functional teams to gather requirements and deliver data-driven reporting solutions.</div>
+          <div class="exp-bullet">Analyzed healthcare utilization, revenue cycle, operational, and patient-related datasets to identify trends and improvement opportunities.</div>
+          <div class="exp-bullet">Generated ad-hoc reports, dashboards, and customized analytical insights for stakeholders and month-end reporting activities.</div>
+          <div class="exp-bullet">Ensured HIPAA compliance and governance standards while managing sensitive healthcare information and large datasets.</div>
+        </div>
+      </div>
+
+      <div class="exp-stack">
+        <span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Tableau</span><span class="tag">Power BI</span>
+        <span class="tag">KPI Dashboards</span><span class="tag">Data Validation</span><span class="tag">ETL Processes</span>
+        <span class="tag">Root Cause Analysis</span><span class="tag">HIPAA</span><span class="tag">Reporting Automation</span>
+      </div>
+    </div>
+
+    <!-- ── Fortis ── -->
+    <div class="exp-card reveal">
+      <div class="exp-card-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;">
+            <div class="exp-company">Fortis Healthcare</div>
+            <span class="badge badge-grey">Internship</span>
+          </div>
+          <div class="exp-role">Pharmacy &amp; Research Intern</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <div class="exp-dates">Sep 2021 – May 2022</div>
+          <div style="font-size:.75rem;color:var(--light-slate);margin-top:.2rem;">Internship</div>
+        </div>
+      </div>
+
+      <div class="exp-card-body">
+        <div style="padding:.85rem 1rem;background:var(--light-grey);border-radius:10px;margin-bottom:1.5rem;border-left:3px solid var(--royal-blue);">
+          <p style="font-size:.83rem;color:var(--slate);line-height:1.6;font-style:italic;">
+            Foundation role combining clinical research, pharmacovigilance, and data validation — building the healthcare domain knowledge that underpins all subsequent analytical work.
+          </p>
+        </div>
+
+        <div class="exp-bullets">
+          <div class="exp-bullet">Assisted in clinical research, pharmacy operations, and pharmacovigilance activities by collecting, validating, and maintaining healthcare and pharmaceutical data.</div>
+          <div class="exp-bullet">Performed data analysis, trending, and adverse drug reaction (ADR) monitoring to identify medication safety patterns and support reporting accuracy.</div>
+          <div class="exp-bullet">Supported clinical and pharmaceutical research through documentation management, data organization, and preparation of analytical summaries.</div>
+          <div class="exp-bullet">Conducted data entry, cleansing, reconciliation, and quality assurance checks to ensure accuracy and compliance with healthcare standards.</div>
+          <div class="exp-bullet">Participated in medication safety monitoring, adverse event tracking, pharmacovigilance reporting, and maintenance of regulatory documentation.</div>
+          <div class="exp-bullet">Assisted in preparing SOPs, audit records, compliance reports, inventory tracking, and laboratory sample management documentation.</div>
+          <div class="exp-bullet">Performed literature reviews and gathered clinical references to support ongoing healthcare research and pharmaceutical studies.</div>
+        </div>
+      </div>
+
+      <div class="exp-stack">
+        <span class="tag">Excel</span><span class="tag">Data Analysis</span><span class="tag">Pharmacovigilance</span>
+        <span class="tag">Clinical Research</span><span class="tag">Data Validation</span><span class="tag">GLP Standards</span>
+        <span class="tag">SOP Documentation</span><span class="tag">Adverse Event Tracking</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-name">Akhila Reddy Katipelli</div>
+        <div class="footer-role">Healthcare Data Analyst · St. Louis, MO</div>
+      </div>
+      <a href="assets/Akhila_DA_Resume.docx" download class="footer-download">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+    </div>
+    <div class="footer-contacts">
+      <a href="tel:+13144418964" class="footer-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.06 6.06l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.01z"/></svg>Call</a>
+      <a href="mailto:akhilak2701@gmail.com" class="footer-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</a>
+      <a href="https://www.linkedin.com/in/akhilakreddy/" target="_blank" class="footer-btn"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+      <a href="https://github.com" target="_blank" class="footer-btn"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
+      <a href="https://wa.me/13144418964?text=Hi%2C+I+came+across+your+profile+and+found+your+background+interesting.+We+have+an+opportunity+that+aligns+with+your+experience.+Would+you+be+open+to+discussing+this+further%3F" target="_blank" class="footer-btn"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.127 1.528 5.869L0 24l6.337-1.503A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 0 1-5.051-1.394l-.36-.216-3.764.893.934-3.657-.237-.375A9.812 9.812 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>WhatsApp</a>
+    </div>
+    <div class="footer-copy">All rights reserved &copy; <span id="yr"></span> Triopath Careers LLC</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
